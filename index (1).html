@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lights, Camera, Action! – Grade 7A Entertainment Vocabulary</title>
+<style>
+:root{--velvet:#2a0f2e;--gold:#ffcf4a;--pink:#ff4f8b;--teal:#19c4b8;--cream:#fff6e3;--ink:#2b1630}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Baloo 2","Fredoka","Trebuchet MS","Segoe UI",Tahoma,sans-serif;color:var(--cream);min-height:100vh;padding-bottom:62px;
+background:radial-gradient(ellipse at 50% -10%,#8a2a6e 0,transparent 55%),linear-gradient(#2a0f2e,#150717)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:linear-gradient(90deg,#a0153a88 0,transparent 7%,transparent 93%,#a0153a88 100%)}
+.bar{position:sticky;top:0;z-index:20;background:#1c0a20f0;padding:10px 16px;border-bottom:3px solid var(--gold)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:clamp(16px,2.6vw,22px);font-weight:700}
+.track{position:relative;height:42px;margin-top:8px;background:#ffffff1c;border-radius:21px;overflow:hidden}
+.track>*{position:absolute;top:3px;transition:left .7s ease;font-size:28px;line-height:36px}
+.flag{right:10px;top:3px!important}
+main{padding:10px 14px;position:relative;z-index:2}
+.card{background:var(--cream);color:var(--ink);border-radius:28px;padding:20px;max-width:960px;margin:16px auto;text-align:center;box-shadow:0 10px 0 #0007}
+h1{font-size:clamp(34px,7vw,62px);margin:6px 0;color:var(--pink);line-height:1;text-shadow:3px 3px 0 var(--gold)}
+h2{margin:6px 0;font-size:clamp(26px,5vw,40px);color:var(--pink)}
+.ar{direction:rtl;font-size:clamp(18px,3vw,24px);color:#7a3a78;margin:6px 0}
+.big{font-size:84px;line-height:1}
+.ask{font-size:clamp(17px,2.8vw,23px);margin:6px 0 12px;color:#5a4060}
+.btn{font:inherit;font-size:clamp(20px,3.4vw,28px);font-weight:700;padding:10px 34px;border:0;border-radius:40px;background:var(--gold);color:#4a2a00;cursor:pointer;box-shadow:0 6px 0 #c9971a;margin-top:14px}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #c9971a}
+.btn:focus-visible,.chip:focus-visible,.drop:focus-visible{outline:4px solid var(--teal);outline-offset:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.pc{background:#fff;border:3px solid #f0d9ec;border-radius:20px;padding:10px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.pic{width:100%;height:110px;border-radius:14px;background:linear-gradient(135deg,#ffe3f0,#d9f6f3);display:flex;align-items:center;justify-content:center;font-size:72px}
+.pc.clue .pic{height:64px;font-size:40px}.pc.clue p{margin:0;font-size:clamp(16px,2.4vw,20px);font-weight:600}
+.drop{min-width:170px;min-height:52px;border:4px dashed var(--pink);border-radius:14px;background:#ffeaf3;display:inline-flex;align-items:center;justify-content:center;transition:.15s;font-weight:700;font-size:clamp(18px,2.8vw,24px);padding:0 10px}
+.drop.over{background:#ffc9df;transform:scale(1.06)}
+.drop.ok{border:4px solid var(--teal);background:#d3f6f3;color:#06504a}
+.tray{position:sticky;bottom:50px;z-index:15;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px;padding:12px;background:#ffe9a8;border-radius:18px;box-shadow:0 -4px 14px #0004}
+.chip{padding:6px 18px;border-radius:30px;background:var(--pink);color:#fff;font-size:clamp(18px,3vw,26px);font-weight:700;cursor:grab;touch-action:none;user-select:none;box-shadow:0 5px 0 #b02a5c}
+.chip.lt{width:58px;padding:4px 0;text-align:center;font-size:32px;border-radius:14px;text-transform:lowercase}
+.chip.sel{outline:4px solid var(--teal)}
+.chip.ghost{position:fixed;pointer-events:none;z-index:99;transform:translate(-50%,-50%) rotate(-5deg);box-shadow:0 12px 20px #0006}
+.shake{animation:sh .4s}
+@keyframes sh{20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-8px)}80%{transform:translateX(8px)}}
+.msg{min-height:34px;margin-top:12px;font-size:clamp(17px,2.6vw,23px);font-weight:700}
+.msg.good{color:#0d7d73}.msg.bad{color:#c4264f}
+.word{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px 0}
+.slot{min-width:54px;min-height:66px;font-size:34px;padding:0;text-transform:lowercase}
+.ov{position:fixed;inset:0;background:#000c;z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
+.conf{position:fixed;top:-40px;font-size:28px;animation:fall 2.6s linear forwards;z-index:98;pointer-events:none}
+@keyframes fall{to{transform:translateY(112vh) rotate(420deg)}}
+footer{position:fixed;bottom:0;left:0;right:0;text-align:center;background:#1c0a20;padding:8px;font-size:15px;color:var(--gold);z-index:30;border-top:2px solid var(--gold)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="row"><span id="lvname">Lights, Camera, Action!</span><span id="hearts"></span><span id="stars"></span></div>
+  <div class="track"><span class="flag">🏆</span><div id="mon">🧐</div><div id="run">🤩</div></div>
+</header>
+<main id="main"></main>
+<footer>Created by T. Badria Alfalahi &nbsp;|&nbsp; English · Grade 7A · Unit 1: Entertainment</footer>
+
+<script>
+const $=s=>document.querySelector(s), main=$('#main');
+const shuf=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+const TOTAL=24;
+let lives=3,stars=0,done=0,lvl=0,sS=0,sD=0,sel=null,handler=null,solved=true;
+
+/* ---------- vocabulary: [word, picture, Arabic, clue] ---------- */
+const J1=[['writer','✍️','كاتب'],['clown','🤡','مهرّج'],['sound editor','🎧','مهندس صوت'],['make-up artist','💄','خبير تجميل (مكياج)'],['camera operator','🎥','مصوّر'],['performer','🤹','فنّان / مؤدٍّ']];
+const J2=[['animator','✏️','رسّام رسوم متحركة','I draw pictures that move in cartoons.'],['comedian','😂','ممثل كوميدي','I tell jokes to make people laugh.'],['puppeteer','🧦','محرّك الدمى','I move puppets with my hands.'],['costume designer','🧵','مصمّم أزياء','I design clothes for actors.'],['presenter','📺','مقدّم برامج','I speak to the audience on TV.'],['stunt performer','🏍️','مؤدّي المشاهد الخطرة','I do dangerous jumps instead of the actor.']];
+const PL=[['bowling alley','🎳','صالة البولينغ'],['aquarium','🐠','حوض الأسماك'],['art gallery','🖼️','معرض فني'],['science museum','🦕','متحف العلوم'],['ice rink','⛸️','حلبة تزلج'],['safari park','🦓','حديقة سفاري'],['theme park','🎢','مدينة ملاهي'],['circus','🎪','سيرك'],['planetarium','🌌','قبة فلكية']];
+const SP=[['animator','✏️','رسّام رسوم متحركة'],['aquarium','🐠','حوض الأسماك'],['comedian','😂','ممثل كوميدي']];
+const LV=[
+{n:'Cast & Crew',ic:'🎬',story:'The Grumpy Critic 🧐 is in the theatre! Match each job to its picture before the show starts.',ar:'طابق كل وظيفة بالصورة'},
+{n:'Spotlight Clues',ic:'🔦',story:'Read the clue. Who is standing in the spotlight? Drag the right job.',ar:'اقرأ التلميح واسحب الوظيفة الصحيحة'},
+{n:'Venue Rush',ic:'🎟️',story:'Where can you have fun? Match the entertainment places to the pictures.',ar:'طابق أماكن الترفيه بالصور'},
+{n:'Spell the Star',ic:'⭐',story:'The final act! Drag the letters to spell each word. Beat the Critic!',ar:'اسحب الحروف لتكوين الكلمة'}];
+
+/* ---------- sound & effects ---------- */
+let ac;const beep=(f,d=.12,t='sine')=>{try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.type=t;o.frequency.value=f;g.gain.value=.07;o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+d)}catch(e){}};
+const good=()=>{beep(660);setTimeout(()=>beep(880),110)},bad=()=>beep(170,.3,'sawtooth');
+const confetti=(n=44)=>{for(let i=0;i<n;i++){const s=document.createElement('span');s.className='conf';s.textContent=['⭐','🎉','✨','🎬'][i%4];s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*.7+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),3600)}};
+
+/* ---------- HUD ---------- */
+function hud(){
+ $('#hearts').textContent='❤️'.repeat(lives)+'🖤'.repeat(3-lives);
+ $('#stars').textContent='⭐ '+stars;
+ const p=done/TOTAL, m=Math.max(-.04,p-lives*.07);
+ $('#run').style.left=`calc((100% - 90px)*${p} + 4px)`;
+ $('#mon').style.left=`calc((100% - 90px)*${m})`;
+}
+
+/* ---------- drag & drop (mouse, touch, smartboard) + tap-to-place ---------- */
+const hit=e=>{const el=document.elementFromPoint(e.clientX,e.clientY);return el&&el.closest('.drop:not(.ok)')};
+const clearOver=()=>document.querySelectorAll('.drop.over').forEach(d=>d.classList.remove('over'));
+function select(c){document.querySelectorAll('.chip.sel').forEach(x=>x.classList.remove('sel'));if(sel===c){sel=null}else{sel=c;c.classList.add('sel')}}
+function drag(chip){
+ chip.tabIndex=0;
+ chip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(chip)}});
+ chip.addEventListener('pointerdown',e=>{
+  e.preventDefault();const sx=e.clientX,sy=e.clientY;let g=null;
+  const mv=ev=>{
+   if(!g&&Math.hypot(ev.clientX-sx,ev.clientY-sy)>8){g=chip.cloneNode(true);g.classList.add('ghost');document.body.appendChild(g);chip.style.opacity=.3}
+   if(g){g.style.left=ev.clientX+'px';g.style.top=ev.clientY+'px';clearOver();const t=hit(ev);if(t)t.classList.add('over')}};
+  const up=ev=>{removeEventListener('pointermove',mv);removeEventListener('pointerup',up);removeEventListener('pointercancel',up);clearOver();
+   if(g){g.remove();chip.style.opacity=1;const t=hit(ev);if(t&&handler&&!solved)handler(chip,t)}else select(chip)};
+  addEventListener('pointermove',mv);addEventListener('pointerup',up);addEventListener('pointercancel',up);
+ });
+}
+document.addEventListener('click',e=>{const d=e.target.closest('.drop:not(.ok)');if(d&&sel&&handler&&!solved){const c=sel;sel=null;c.classList.remove('sel');handler(c,d)}});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&sel&&document.activeElement.classList.contains('drop')){e.preventDefault();document.activeElement.click()}});
+
+/* ---------- feedback ---------- */
+const say=(t,c)=>{const m=$('#msg');if(m){m.className='msg '+c;m.innerHTML=t}};
+function right(chip,drop,txt){good();stars++;done++;hud();drop.classList.add('ok');drop.textContent=chip.textContent;chip.remove();sel=null;say('✅ '+txt,'good')}
+function wrong(chip,tip){
+ bad();lives--;hud();chip.classList.add('shake');setTimeout(()=>chip.classList.remove('shake'),450);
+ say('❌ '+tip,'bad');if(lives<=0)caught();
+}
+function nextBtn(fn,t='Next'){const b=document.createElement('button');b.className='btn';b.textContent=t;b.onclick=fn;$('#nav').appendChild(b);b.focus()}
+
+/* ---------- screens ---------- */
+function start(){
+ lives=3;stars=0;done=0;lvl=0;solved=true;handler=null;hud();$('#lvname').textContent='Lights, Camera, Action!';
+ main.innerHTML=`<div class="card"><div class="big">🎬🎭🎪</div><h1>Lights, Camera, Action!</h1>
+ <p class="ask">Grade 7A · Unit 1 · Entertainment. Win the vocabulary show before the <b>Grumpy Critic 🧐</b> catches you! You have 3 hearts.</p>
+ <p class="ar">اربح عرض المفردات قبل أن يمسكك الناقد المزعج!</p><button class="btn" id="go">Start the show</button></div>`;
+ $('#go').onclick=()=>intro(0);
+}
+function intro(i){
+ lvl=i;sS=stars;sD=done;solved=true;handler=null;$('#lvname').textContent='Act '+(i+1)+': '+LV[i].n;
+ main.innerHTML=`<div class="card"><div class="big">${LV[i].ic}</div><h2>Act ${i+1}: ${LV[i].n}</h2><p class="ask">${LV[i].story}</p><p class="ar">${LV[i].ar}</p><button class="btn" id="go">Action!</button></div>`;
+ $('#go').onclick=()=>begin(i);
+}
+function begin(i){lvl=i;if(i===0)board(J1,'pic');else if(i===1)board(J2,'clue');else if(i===2)board(PL,'pic');else spell(0)}
+function board(items,kind){
+ solved=false;sel=null;let left=items.length;
+ const card=it=>kind==='clue'
+  ?`<div class="pc clue"><div class="pic">${it[1]}</div><p>${it[3]}</p><span class="drop" data-a="${it[0]}" tabindex="0"></span></div>`
+  :`<div class="pc"><div class="pic">${it[1]}</div><span class="drop" data-a="${it[0]}" tabindex="0"></span></div>`;
+ main.innerHTML=`<div class="card"><p class="ask">${kind==='clue'?'Who am I? Drag the job to the clue.':'Drag the correct word under each picture.'}</p>
+ <div class="grid">${items.map(card).join('')}</div>
+ <div class="msg" id="msg"></div><div id="nav"></div>
+ <div class="tray">${shuf(items).map(it=>`<div class="chip">${it[0]}</div>`).join('')}</div></div>`;
+ main.querySelectorAll('.chip').forEach(drag);
+ handler=(c,d)=>{
+  const it=items.find(x=>x[0]===c.textContent);
+  if(c.textContent===d.dataset.a){right(c,d,`${it[0]} = ${it[2]}`);if(--left===0){solved=true;confetti(16);nextBtn(finishLevel,'Next act')}}
+  else wrong(c,'Not that one! Look at the picture again.')};
+}
+function spell(i){
+ const w=SP[i];solved=false;sel=null;let left=w[0].length;
+ main.innerHTML=`<div class="card"><div class="pic" style="width:150px;margin:auto">${w[1]}</div><p class="ar">${w[2]}</p>
+ <p class="ask">Word ${i+1} of 3 · Drag the letters into the boxes.</p>
+ <div class="word">${[...w[0]].map(l=>`<span class="drop slot" data-l="${l}" tabindex="0"></span>`).join('')}</div>
+ <div class="msg" id="msg"></div><div id="nav"></div>
+ <div class="tray">${shuf([...w[0]]).map(l=>`<div class="chip lt" data-l="${l}">${l}</div>`).join('')}</div></div>`;
+ main.querySelectorAll('.chip').forEach(drag);
+ handler=(c,d)=>{
+  if(c.dataset.l===d.dataset.l){good();d.classList.add('ok');d.textContent=c.textContent;c.remove();sel=null;
+   if(--left===0){stars++;done++;hud();solved=true;confetti(18);say(`✅ ${w[0]} = ${w[2]}`,'good');nextBtn(()=>i+1<SP.length?spell(i+1):finishLevel(),i+1<SP.length?'Next word':'Finish')}}
+  else wrong(c,'Wrong box! Try another letter or another box.')};
+}
+function finishLevel(){if(lvl<3)intro(lvl+1);else end()}
+function caught(){
+ solved=true;const o=document.createElement('div');o.className='ov';
+ o.innerHTML=`<div class="card"><div class="big">🧐</div><h2>The Grumpy Critic stopped the show!</h2><p class="ask">Take a breath and try this act again.</p><p class="ar">لا تقلق، حاول مرة أخرى!</p><button class="btn" id="re">Try again</button></div>`;
+ document.body.appendChild(o);
+ $('#re').onclick=()=>{o.remove();lives=3;stars=sS;done=sD;hud();begin(lvl)};
+}
+function end(){
+ solved=true;handler=null;done=TOTAL;hud();$('#lvname').textContent='Standing ovation!';
+ const r=stars/TOTAL, m=r>=.9?'Superstar! The Critic is clapping!':r>=.6?'Great show! Play again for more stars.':'The show went on! Try again for more stars.';
+ main.innerHTML=`<div class="card"><div class="big">🏆</div><h1>${stars} / ${TOTAL} ⭐</h1><h2>${m}</h2>
+ <p class="ask">You learned jobs and places in the world of entertainment.</p><p class="ar">أحسنت! أنت نجم المفردات</p><button class="btn" id="again">Play again</button></div>`;
+ $('#again').onclick=start;confetti(80);
+}
+hud();start();
+</script>
+</body>
+</html>
